@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 (2026-09-30)
+
+- Avoid a Computer Use helper crash when inspecting target preview cards by rendering their titles inside the group, with accessible heading semantics.
+- Preserve all target controls and configuration behavior.
+
 ## 0.1.0 (2026-09-30)
 
 - First public GitHub and npm release under the MIT license.

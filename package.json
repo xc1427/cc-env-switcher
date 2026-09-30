@@ -1,6 +1,6 @@
 {
   "name": "cc-env-switcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A native macOS app for switching Claude Code environment profiles",
   "repository": {
     "type": "git",

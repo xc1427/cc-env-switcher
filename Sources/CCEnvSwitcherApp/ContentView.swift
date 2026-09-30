@@ -560,8 +560,14 @@ private struct TargetSummaryCard: View {
     @State private var isDetailsExpanded = false
 
     var body: some View {
-        GroupBox(preview.target.title) {
+        // 将标题作为内容保留，避开 Computer Use 处理带标题 GroupBox 时的数组越界。
+        // https://github.com/openai/codex/issues/43573
+        GroupBox {
             VStack(alignment: .leading, spacing: 10) {
+                Text(preview.target.title)
+                    .font(.headline)
+                    .accessibilityAddTraits(.isHeader)
+
                 if let errorMessage = preview.errorMessage {
                     Text(errorMessage)
                         .font(.body)
