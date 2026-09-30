@@ -25,11 +25,11 @@ if [ -e "$APP_BUNDLE" ]; then mv "$APP_BUNDLE" "$APP_BUNDLE.previous.$(date +%s)
 
 if [ -f "$ICON_SOURCE" ] && [ -x "$ICON_GENERATOR" ]; then
   if [ ! -f "$ICON_OUTPUT" ] || [ "$ICON_SOURCE" -nt "$ICON_OUTPUT" ] || [ "$ICON_GENERATOR" -nt "$ICON_OUTPUT" ]; then
-    "$ICON_GENERATOR" >/dev/null
+    "$ICON_GENERATOR" >&2
   fi
 fi
 
-swift build --package-path "$ROOT_DIR" -c release --arch arm64 --arch x86_64 --product "$EXECUTABLE_NAME" >/dev/null
+swift build --package-path "$ROOT_DIR" -c release --arch arm64 --arch x86_64 --product "$EXECUTABLE_NAME" >&2
 BIN_DIR="$(swift build --package-path "$ROOT_DIR" -c release --arch arm64 --arch x86_64 --product "$EXECUTABLE_NAME" --show-bin-path)"
 EXECUTABLE_PATH="$BIN_DIR/$EXECUTABLE_NAME"
 
