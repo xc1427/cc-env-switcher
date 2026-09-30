@@ -1,0 +1,74 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="148" y1="84" x2="874" y2="942" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBF6F1"/>
+      <stop offset="1" stop-color="#EDD8CA"/>
+    </linearGradient>
+    <linearGradient id="leftCard" x1="220" y1="280" x2="472" y2="714" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#DB8969"/>
+      <stop offset="1" stop-color="#BC5E3F"/>
+    </linearGradient>
+    <linearGradient id="diamond" x1="394" y1="398" x2="630" y2="626" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#875540"/>
+      <stop offset="1" stop-color="#C96B4C"/>
+    </linearGradient>
+    <filter id="shadow" x="86" y="108" width="852" height="820" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#7A4A38" flood-opacity="0.12"/>
+    </filter>
+    <filter id="soft" x="0" y="0" width="1024" height="1024" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#7A4A38" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect x="44" y="44" width="936" height="936" rx="224" fill="url(#bg)"/>
+  <rect x="44" y="44" width="936" height="936" rx="224" stroke="#F7EDE5" stroke-width="10"/>
+  <ellipse cx="396" cy="248" rx="250" ry="166" fill="#FFFDFB" fill-opacity="0.72"/>
+  <ellipse cx="690" cy="776" rx="218" ry="158" fill="#E8CCBC" fill-opacity="0.42"/>
+
+  <g filter="url(#shadow)">
+    <path d="M432 488C462 470 492 460 522 460" stroke="#C8927B" stroke-opacity="0.46" stroke-width="24" stroke-linecap="round"/>
+    <path d="M502 564C544 592 588 608 640 612" stroke="#D9B2A0" stroke-opacity="0.62" stroke-width="24" stroke-linecap="round"/>
+
+    <g filter="url(#soft)">
+      <rect x="184" y="274" width="276" height="404" rx="96" fill="url(#leftCard)"/>
+      <rect x="184" y="274" width="276" height="404" rx="96" stroke="#E9B49D" stroke-opacity="0.35" stroke-width="6"/>
+
+      <rect x="564" y="346" width="276" height="404" rx="96" fill="#F9F1EA"/>
+      <rect x="564" y="346" width="276" height="404" rx="96" stroke="#D5A792" stroke-width="6"/>
+    </g>
+
+    <g opacity="0.92">
+      <circle cx="260" cy="396" r="18" fill="#FFF7F1"/>
+      <rect x="298" y="381" width="94" height="30" rx="15" fill="#FFF7F1"/>
+      <rect x="404" y="381" width="28" height="30" rx="15" fill="#F3CBB7" fill-opacity="0.90"/>
+
+      <circle cx="260" cy="478" r="18" fill="#F8D8C8"/>
+      <rect x="298" y="463" width="124" height="30" rx="15" fill="#FFF7F1"/>
+
+      <circle cx="260" cy="560" r="18" fill="#FFF7F1"/>
+      <rect x="298" y="545" width="88" height="30" rx="15" fill="#FFF7F1"/>
+      <rect x="398" y="545" width="42" height="30" rx="15" fill="#F3CBB7" fill-opacity="0.90"/>
+    </g>
+
+    <g opacity="0.96">
+      <rect x="594" y="451" width="112" height="30" rx="15" fill="#CA6E4F"/>
+      <circle cx="740" cy="466" r="18" fill="#CA6E4F"/>
+
+      <rect x="594" y="533" width="146" height="30" rx="15" fill="#CA6E4F"/>
+      <circle cx="768" cy="548" r="18" fill="#E5C1AD"/>
+
+      <rect x="594" y="615" width="94" height="30" rx="15" fill="#CA6E4F"/>
+      <circle cx="722" cy="630" r="18" fill="#CA6E4F"/>
+    </g>
+
+    <g transform="translate(512 512) rotate(45)">
+      <rect x="-116" y="-116" width="232" height="232" rx="70" fill="url(#diamond)"/>
+      <rect x="-116" y="-116" width="232" height="232" rx="70" stroke="#F2D7C9" stroke-opacity="0.34" stroke-width="6"/>
+    </g>
+
+    <path d="M442 550H566" stroke="#FFF7F1" stroke-width="24" stroke-linecap="round"/>
+    <path d="M536 520L568 550L536 580" stroke="#FFF7F1" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M580 474H458" stroke="#F1D8CA" stroke-width="24" stroke-linecap="round"/>
+    <path d="M488 444L456 474L488 504" stroke="#F1D8CA" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

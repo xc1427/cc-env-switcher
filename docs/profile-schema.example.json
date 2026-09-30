@@ -1,0 +1,14 @@
+{
+  "description": "Sample remote Anthropic-compatible provider",
+  "env": {
+    "API_TIMEOUT_MS": "30000000",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_BASE_URL": "https://ai-gateway.vercel.sh",
+    "ANTHROPIC_AUTH_TOKEN": "<set-me>",
+    "ANTHROPIC_SMALL_FAST_MODEL": "anthropic/claude-sonnet-4.6",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "anthropic/claude-opus-4.6",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "anthropic/claude-sonnet-4.6",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "anthropic/claude-haiku-4.5",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  }
+}

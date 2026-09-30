@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:cc-env-switcher}",
+      "name": "Debug cc-env-switcher",
+      "target": "cc-env-switcher",
+      "configuration": "debug",
+      "preLaunchTask": "swift: Build Debug cc-env-switcher"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:cc-env-switcher}",
+      "name": "Release cc-env-switcher",
+      "target": "cc-env-switcher",
+      "configuration": "release",
+      "preLaunchTask": "swift: Build Release cc-env-switcher"
+    }
+  ]
+}

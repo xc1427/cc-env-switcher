@@ -1,0 +1,39 @@
+{
+  "name": "cc-env-switcher",
+  "version": "0.1.0",
+  "description": "A native macOS app for switching Claude Code environment profiles",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xc1427/cc-env-switcher.git"
+  },
+  "scripts": {
+    "test": "swift test",
+    "build": "sh script/build-macos-app.sh",
+    "build:app": "sh script/build-macos-app.sh",
+    "build:dmg": "sh script/package-dmg.sh",
+    "assemble": "sh script/assemble.sh",
+    "ci": "swift test && npm run assemble && node --test Tests/*.test.cjs",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "publish:release": "sh script/publish-release.sh",
+    "publish:snapshot": "sh script/publish-snapshot.sh",
+    "verify": "sh script/verify-package.sh"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0"
+  },
+  "license": "MIT",
+  "author": "xc1427",
+  "homepage": "https://github.com/xc1427/cc-env-switcher#readme",
+  "bugs": {
+    "url": "https://github.com/xc1427/cc-env-switcher/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "private": true
+}

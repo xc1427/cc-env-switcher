@@ -1,0 +1,14 @@
+.DS_Store
+.build
+build
+dist
+publish
+DerivedData
+node_modules
+.node
+Packaging/macOS/AppIcon.icns
+*.tgz
+.env
+.env.*
+*.p12
+*.pem
