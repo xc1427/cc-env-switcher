@@ -15,7 +15,7 @@ cc-env-switcher
 
 Or download the DMG from [GitHub Releases](https://github.com/xc1427/cc-env-switcher/releases) and drag the app to Applications. The npm package includes the native app: no Swift compiler, build step, or install script is required.
 
-The app is ad-hoc signed, **not Apple-notarized**. macOS may block a downloaded app on first launch. Review the source and release before deciding whether to allow it in System Settings → Privacy & Security. Building from source is also supported.
+Installation via npm typically does not trigger a macOS security prompt. The app is not Apple-notarized; if macOS blocks the app after installation from a browser-downloaded DMG, follow [Apple’s instructions](https://support.apple.com/102445) to allow it in System Settings → Privacy & Security.
 
 ## Use
 
