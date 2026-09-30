@@ -29,13 +29,16 @@ if [ -f "$ICON_SOURCE" ] && [ -x "$ICON_GENERATOR" ]; then
   fi
 fi
 
-swift build --package-path "$ROOT_DIR" -c release --arch arm64 --arch x86_64 --product "$EXECUTABLE_NAME" >&2
-BIN_DIR="$(swift build --package-path "$ROOT_DIR" -c release --arch arm64 --arch x86_64 --product "$EXECUTABLE_NAME" --show-bin-path)"
-EXECUTABLE_PATH="$BIN_DIR/$EXECUTABLE_NAME"
+# 分别编译后合并，避免旧版 SwiftPM 多架构构建丢失 package 访问级别参数。
+for ARCH in arm64 x86_64; do
+  swift build --package-path "$ROOT_DIR" -c release --arch "$ARCH" --product "$EXECUTABLE_NAME" >&2
+done
+ARM_BIN_DIR="$(swift build --package-path "$ROOT_DIR" -c release --arch arm64 --show-bin-path)"
+INTEL_BIN_DIR="$(swift build --package-path "$ROOT_DIR" -c release --arch x86_64 --show-bin-path)"
 
 mkdir -p "$MACOS_DIR" "$RESOURCES_DIR"
 cp "$PLIST_TEMPLATE" "$CONTENTS_DIR/Info.plist"
-cp "$EXECUTABLE_PATH" "$MACOS_DIR/$EXECUTABLE_NAME"
+lipo -create "$ARM_BIN_DIR/$EXECUTABLE_NAME" "$INTEL_BIN_DIR/$EXECUTABLE_NAME" -output "$MACOS_DIR/$EXECUTABLE_NAME"
 chmod +x "$MACOS_DIR/$EXECUTABLE_NAME"
 
 /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $APP_NAME" "$CONTENTS_DIR/Info.plist"
